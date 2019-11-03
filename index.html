@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Free Web tutorials">
+    <meta name="description" content="">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Laura Sampaolo">
     <link rel="stylesheet" href="css/style.css">
     <title></title>
 </head>
@@ -18,16 +18,27 @@
     </header>
     <main>
         <section class="section-recherche">
-            <div class="search-btn"></div>
+            <div class="search-btn">
+                <button class="search-btn">OK</button>
+            </div>
             <input class="search-input" type="text" placeholder="Rechercher une fiche...">
         </section>
         <section class="section-other-fiche">
             <div class="inner-other-fiche">
                 <div class="fiche">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit earum fugiat.
+                    <p>
+                        <a class="afiche" href="fiches/index-fiche-2549.html">Voir fiche 2549</a>
+                    </p>
                 </div>
                 <div class="fiche">
-
+                    <p>
+                        <a class="afiche" href="fiches/index-fiche-6214.html">Voir fiche 6214</a>
+                    </p>
+                </div>
+                <div class="fiche">
+                    <p>
+                        <a class="afiche" href="fiches/index-fiche-1149.html">Voir fiche 1149</a>
+                    </p>
                 </div>
             </div>
 
@@ -37,4 +48,29 @@
     </main>
  
 </body>
-<html>
+</html>
+
+<script>
+    $(document).ready(function(){
+        $('#search-user').keyup(function(){
+        $('#section-recherche').html('');
+    
+        var utilisateur = $(this).val();
+    
+        if(utilisateur != ""){
+            $.ajax({
+            type: 'GET',
+            url: 'fiches/index-fiche-1149','fiches/index-fiche-2549': 'fiches/index-fiche-6214', 
+            data: '',
+            success: function(data){
+                if(data != ""){
+                $('#section-recherche').append(data);
+                }else{
+                document.getElementById('section-recherche').innerHTML = "<div style='font-size: 20px; text-align: center; margin-top: 10px'>Aucune fiche trouvée</div>"
+                }
+            }
+            });
+        }
+        });
+    });
+</script>
