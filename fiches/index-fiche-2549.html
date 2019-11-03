@@ -1,0 +1,191 @@
+<html>
+    <head>  
+        <title>RFC : 2549</title>
+        <h1>RFC : 2549</h1>
+        <table>
+            <tr>
+                <td>Network Working Group</td>
+                <td> D. Waitzman</td>
+            </tr>
+            <tr>
+                <td>Request for Comments: 2549</td>
+                <td>IronBridge Networks</td>
+            </tr>
+            <tr>
+                <td>Updates: 1149</td>
+                <td>1 April 1990</td>
+            </tr>
+            <tr>
+                <td>Category: Experimental</td>
+            </tr>
+        </table>
+    </head>
+    <body>
+        <main>
+            <h1>IP over Avian Carriers with Quality of Service</h1>
+
+            <h2>Status of this Memo</h2>
+            
+                <p>This memo defines an Experimental Protocol for the Internet
+                    community.  It does not specify an Internet standard of any kind.
+                    Discussion and suggestions for improvement are requested.
+                    Distribution of this memo is unlimited.</p>  
+            
+            <h2>Copyright Notice</h2>
+            
+                <p>Copyright (C) The Internet Society (1999).  All Rights Reserved.</p>
+            
+            <h2>Abstract</h2> 
+            
+                <p> This memo amends <a href="#">RFC 1149</a>, "A Standard for the Transmission of IP
+                    Datagrams on Avian Carriers", with Quality of Service information.
+                    This is an experimental, not recommended standard</p>
+            
+                <p>Upon receipt, the duct tape is removed and the paper copy of the
+                datagram is optically scanned into a electronically transmittable
+                form.</p>
+            
+            <h2>Overview and Rational</h2>
+            
+                <p>   The following quality of service levels are available: Concorde,
+                    First, Business, and Coach.  Concorde class offers expedited data
+                    delivery.  One major benefit to using Avian Carriers is that this is
+                    the only networking technology that earns frequent flyer miles, plus
+                    the Concorde and First classes of service earn 50% bonus miles per
+                    packet.  Ostriches are an alternate carrier that have much greater
+                    bulk transfer capability but provide slower delivery, and require the
+                    use of bridges between domains.</p>
+                 
+                <p>The service level is indicated on a per-carrier basis by bar-code
+                    markings on the wing.  One implementation strategy is for a bar-code
+                    reader to scan each carrier as it enters the router and then enqueue
+                    it in the proper queue, gated to prevent exit until the proper time.
+                    The carriers may sleep while enqueued.</p>
+                     
+                <p>For secure networks, carriers may have classes Prime or Choice.
+                    Prime carriers are self-keying when using public key encryption.
+                    Some distributors have been known to falsely classify Choice carriers
+                    as Prime.</p>
+                    
+                <p>Packets MAY be marked for deletion using RED paint while enqueued.</p>
+
+                <p>Weighted fair queueing (WFQ) MAY be implemented using scales, as
+                shown:</p>
+             
+                <pre>                                               __
+                                               _____/-----\   / o\
+                                              <____   _____\_/    >--
+                              +-----+              \ /    /______/
+                              | 10g |               /|:||/
+                              +-----+              /____/|
+                              | 10g |                    |
+                              +-----+          ..        X
+                            ===============================
+                                           ^
+                                           |
+                                       =========
+                </pre>
+
+               <p>Carriers in the queue too long may leave log entries, as shown on the
+                scale.</p>
+             
+                <p>The following is a plot of traffic shaping, from coop-erative host
+                sites.</p>
+
+                <pre>
+                Alt |       Plot of Traffic Shaping showing carriers in flight
+                    |
+                    2k |           ....................
+                    |          .                    .
+                    |         .                      .
+                    1k |        .                        .
+                    |   +---+                          +---+
+                    |   | A |                          | B |
+                    |   +---+                          +---+
+                    |_____________________________________________
+                </pre>
+
+              <p>Avian carriers normally bypass bridges and tunnels but will seek out
+                worm hole tunnels.  When carrying web traffic, the carriers may
+                digest the spiders, leaving behind a more compact representation.
+                The carriers may be confused by mirrors.</p>
+
+               <p>Round-robin queueing is not recommended. Robins make for well-tuned
+                networks but do not support the necessary auto-homing feature.</p>
+
+               <p>A BOF was held at the last IETF but only Avian Carriers were allowed
+                entry, so we don't know the results other than we're sure they think
+                MPLS is great.  Our attempts at attaching labels to the carriers have
+                been met with resistance.</p>
+
+               <p>NATs are not recommended either -- as with many protocols, modifying
+                the brain-embedded IP addresses is difficult, plus Avian Carriers MAY
+                eat the NATs.</p>
+             
+                <p>Encapsulation may be done with saran wrappers.  Unintentional
+                encapsulation in hawks has been known to occur, with decapsulation
+                being messy and the packets mangled.</p>
+             
+                <p>Loose source routes are a viable evolutionary alternative enhanced
+                standards-based MSWindows-compliant technology, but strict source
+                routes MUST NOT be used, as they are a choke-point.</p>
+             
+               <p>The ITU has offered the IETF formal alignment with its corresponding
+                technology, Penguins, but that won't fly.</p> 
+             
+               <p>Multicasting is supported, but requires the implementation of a clone
+                device.  Carriers may be lost if they are based on a tree as it is
+                being pruned.  The carriers propagate via an inheritance tree.  The
+                carriers have an average TTL of 15 years, so their use in expanding
+                ring searches is limited.</p> 
+             
+               <p>Additional quality of service discussion can be found in a Michelin's
+                guide.</p>
+             
+               <h2>MIB and Management issues</h2>
+
+               <code>AvCarrier2 OBJECT-TYPE
+                    SYNTAX     SEQUENCE OF DNA
+                    MAX-ACCESS can't-read
+                    STATUS     living
+                    DESCRIPTION "Definition of an avian carrier"
+                    ::= { life eukaryotes mitochondrial_eukaryotes crown_eukaryotes
+                            metazoa chordata craniata vertebrata gnathostomata
+                            sarcopterygii terrestrial_vertebrates amniota diapsida
+                            archosauromorpha archosauria dinosauria aves neornithes
+                            columbiformes columbidae columba livia }
+                
+                    AvCarrier OBJECT-TYPE
+                    SYNTAX     SET OF Cells
+                    MAX-ACCESS not-accessible
+                    STATUS     obsolete
+                    DESCRIPTION "Definition of an avian carrier"
+                    ::= { life animalia chordata vertebrata aves
+                            columbiformes columbidae columba livia }
+                
+                    PulseRate OBJECT-TYPE
+                    SYNTAX     Gauge(0..300)
+                    MAX-ACCESS read-only
+                </code>
+
+
+            <h2>Security Considerations</h2>
+
+                <p>Security is not generally a problem in normal operation, but special
+                measures must be taken (such as data encryption) when avian carriers
+                are used in a tactical environment.</p>
+             
+            <h2>Author's Address</h2>
+             
+                <li>
+                    <ul>David Waitzman</ul>
+                    <ul>BBN Systems and Technologies Corporation</ul>
+                    <ul>BBN Labs Division</ul>
+                    <ul>10 Moulton Street</ul>
+                    <ul>Cambridge, MA 02238</ul>
+                    <ul>hone: (617) 873-4323</ul>
+                    <ul>EMail: dwaitzman@BBN.COM</ul>
+                </li>
+        </main>
+    </body>
+</html>

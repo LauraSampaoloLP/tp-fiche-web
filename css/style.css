@@ -1,0 +1,77 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  background: #EDEDED;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .titre {
+  text-align: center;
+}
+
+main {
+  padding-top: 70px;
+}
+
+main .section-recherche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .section-recherche .search-btn {
+  height: 54px;
+  width: 54px;
+  background: pink;
+  margin-right: 10px;
+}
+
+main .section-recherche .search-input {
+  width: 819px;
+  height: 54px;
+  background: #C4C4C4;
+  border: none;
+  padding: 0 10px;
+}
+
+main .section-other-fiche {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .section-other-fiche .inner-other-fiche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .section-other-fiche .inner-other-fiche .fiche {
+  height: 100px;
+  width: 100px;
+  background: pink;
+  margin: 0 10px;
+}
+/*# sourceMappingURL=style.css.map */

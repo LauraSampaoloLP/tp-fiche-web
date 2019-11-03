@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    background:#EDEDED;
+}
+header {
+    display: flex;
+    justify-content: center;
+    // border: 1px solid black;
+
+    .titre {
+        // border: 1px solid black;
+        text-align: center;
+    }
+}
+main {
+    padding-top: 70px;
+
+    .section-recherche {
+        display: flex;
+        justify-content: center;
+
+        .search-btn {
+            height: 54px;
+            width: 54px;
+            background: pink;
+            margin-right: 10px
+        }
+
+        .search-input {
+            width: 819px;
+            height: 54px;
+            background: #C4C4C4;
+            border: none;
+            padding: 0 10px;
+        }
+    }
+
+    .section-other-fiche {
+        // border: 1px solid red;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .inner-other-fiche{
+            display: flex;
+
+            .fiche {
+                height: 100px;
+                width: 100px;
+                background: pink;
+                margin: 0 10px;
+            }
+        }
+    }
+}
